@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draw View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ARDrawViewController" customModule="ARDRAW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEF-lO-Anw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-5b-lm9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPd-T3-987">
+                                <rect key="frame" x="20" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7wV-m5-nRL"/>
+                                    <constraint firstAttribute="height" constant="80" id="YMg-Qj-omd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" image="add2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yso-8i-uyD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-nd-QVD">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="slJ-JD-Xdh"/>
+                                    <constraint firstAttribute="width" constant="80" id="tc0-W5-sTC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" image="reset">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LmR-wY-16a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-Ll-ytq">
+                                <rect key="frame" x="167" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="J9d-US-Zze"/>
+                                    <constraint firstAttribute="width" constant="80" id="cSQ-fl-8a7"/>
+                                </constraints>
+                                <state key="normal" image="draw"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="J5T-Ll-ytq" firstAttribute="centerX" secondItem="kEF-lO-Anw" secondAttribute="centerX" id="IId-Dc-lRD"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="bottom" secondItem="bvv-nd-QVD" secondAttribute="bottom" constant="20" id="OcN-Q5-oSL"/>
+                            <constraint firstItem="MLc-5b-lm9" firstAttribute="leading" secondItem="frz-Oe-yH3" secondAttribute="leading" id="QDm-yq-VOY"/>
+                            <constraint firstItem="RPd-T3-987" firstAttribute="leading" secondItem="frz-Oe-yH3" secondAttribute="leading" constant="20" id="Uut-Cg-Cwh"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="bottom" secondItem="J5T-Ll-ytq" secondAttribute="bottom" constant="20" id="dcD-TT-NOV"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="trailing" secondItem="MLc-5b-lm9" secondAttribute="trailing" id="gx6-bB-Hy5"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="bottom" secondItem="RPd-T3-987" secondAttribute="bottom" constant="20" id="hEI-tc-do2"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="trailing" secondItem="bvv-nd-QVD" secondAttribute="trailing" constant="20" id="itC-3Z-urV"/>
+                            <constraint firstItem="frz-Oe-yH3" firstAttribute="bottom" secondItem="MLc-5b-lm9" secondAttribute="bottom" id="moH-9L-jQe"/>
+                            <constraint firstItem="MLc-5b-lm9" firstAttribute="top" secondItem="frz-Oe-yH3" secondAttribute="top" id="pQE-yt-2e5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="frz-Oe-yH3"/>
+                    </view>
+                    <connections>
+                        <outlet property="addObjectButton" destination="RPd-T3-987" id="gN4-FK-HKJ"/>
+                        <outlet property="draw" destination="J5T-Ll-ytq" id="L9l-gW-0Bc"/>
+                        <outlet property="resetButton" destination="bvv-nd-QVD" id="Z9T-jz-gVh"/>
+                        <outlet property="sceneView" destination="MLc-5b-lm9" id="KOf-0E-7Pp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add2" width="48" height="48"/>
+        <image name="draw" width="40" height="40"/>
+        <image name="reset" width="50" height="50"/>
+    </resources>
+</document>
